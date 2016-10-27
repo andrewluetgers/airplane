@@ -28,6 +28,7 @@ exports.load = (configPath, callback) ->
     try
       result = exports.require(configPath)
     catch error
+      console.log("ERROR", error);
       return callback(new Error("Error loading #{configPath}"))
 
     return callback(null, result)
